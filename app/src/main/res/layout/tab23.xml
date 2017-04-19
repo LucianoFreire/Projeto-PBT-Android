@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_3t4_i64"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#90A4AE"
+        android:weightSum="1">
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+        <!-- Faixa Superior -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#727273"
+            android:gravity="center"
+            android:paddingTop="0dp">
+
+            <!-- Texto PBT RDOVIARIO -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PBT RODOVIÁRIO"
+                android:textSize="20dp"
+                android:textColor="#050505"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:id="@+id/PbtRod"/>
+        </LinearLayout>
+<!--///////////////////////////////////////////////////////////////////////////////-->
+
+<!--#################################################################################-->
+        <!-- FAIXA DESCRIÇÃO DA CLASSE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Texto Classificação Veiculos -->
+            <TextView
+            android:id="@+id/veic_3t4_i64"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3T4 / I-64"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"/>
+        </LinearLayout>
+<!--######################################################################################-->
+
+<!--////////////////////////////////////////////////////////////////////////////////////////-->
+        <!-- Frame CENTRAL DA IMAGEM-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <!-- Imagem dos Veiculos -->
+            <ImageView
+                android:id="@+id/ImgV22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img3t4">
+            </ImageView>
+        </FrameLayout>
+<!--////////////////////////////////////////////////////////////////////////////////-->
+
+<!--##################################################################################-->
+        <!-- FrameLayout Inferior PARTE LOGICA -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="241dp"
+            android:background="#B0BEC5">
+
+                 <!--TEXTVIEW TEXTO - PBT-->
+            <TextView
+                android:id="@+id/txVpbt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PBT"
+                android:textSize="25dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <!--TEXTVIEW TEXTO - TOLERANCIA-->
+            <TextView
+                android:id="@+id/txVtolera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOLERÂNCIA"
+                android:textSize="25dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_below="@+id/editTextPBT"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="41dp" />
+
+            <!--TEXTVIEW SIMBOLO - PORCENTAGEM(%)-->
+            <TextView
+                android:id="@+id/txVPorcentagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textSize="25dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_alignTop="@+id/txVtolera"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/editTextPBT"
+                android:layout_toEndOf="@+id/editTextPBT" />
+
+            <!--EDITTEXT CAMPO DE TEXTO - TOLERANCIA-->
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="5"
+                android:gravity="center"
+                android:background="@drawable/borda_caixatexto"
+                android:id="@+id/editTextTolerancia"
+                android:layout_alignTop="@+id/txVPorcentagem"
+                android:layout_toLeftOf="@+id/txVPorcentagem"
+                android:layout_toStartOf="@+id/txVPorcentagem" />
+
+            <!--EDITTEXT CAMPO DE TEXTO - PBT-->
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="5"
+                android:gravity="center"
+                android:background="@drawable/borda_caixatexto"
+                android:textColor="#FFFFFF"
+                android:id="@+id/editTextPBT"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_alignBaseline="@+id/txVpbt"
+                android:layout_alignBottom="@+id/txVpbt"
+                android:layout_toRightOf="@+id/txVtolera"
+                android:layout_toEndOf="@+id/txVtolera" />
+
+            <!--IMAGEBUTTON - BOTÃO CALCULAR-->
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btncalcular"
+                android:background="#ffffff"
+                android:src="@drawable/btn_calcular"
+                android:onClick="calcular"
+                android:layout_marginBottom="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+<!--###################################################################################-->
+
+
+        <!-- Faixa Inferior
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2b2b2d">
+
+
+        </RelativeLayout>
+        -->
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

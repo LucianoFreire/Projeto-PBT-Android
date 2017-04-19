@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Isso define um botão clicado-->
+    <item android:drawable="@drawable/btnlegislacaop"
+        android:state_pressed="true"/>
+
+    <!-- Isso define um botão focado
+    <item android:drawable="@drawable/btnveicfocado"
+        android:state_pressed="true"/>
+        -->
+
+    <!-- Isso define um botão normal -->
+    <item android:drawable="@drawable/btnlegislacaon"/>
+
+</selector>
